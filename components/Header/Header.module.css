@@ -1,0 +1,161 @@
+.header {
+  background-color: var(--color-bg-primary);
+  box-shadow: var(--shadow-sm);
+  height: var(--header-height);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.logo {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+}
+
+.catalogBtn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: background-color 0.2s ease;
+}
+
+.catalogBtn:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary-hover);
+  border: 1px solid var(--color-primary-hover);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.iconBtn {
+  padding: var(--space-2);
+  color: var(--color-gray-600);
+  border-radius: var(--radius-md);
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.iconBtn:hover {
+  color: var(--color-gray-900);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.cartBtn {
+  position: relative;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: var(--color-accent-red);
+  color: var(--color-white);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: var(--font-size-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-gray-300);
+  border-radius: 50%;
+}
+
+.username {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-900);
+}
+
+/* Планшет */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-4);
+  }
+  
+  .logo {
+    font-size: var(--font-size-xl);
+  }
+  
+  .catalogBtn {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-xs);
+  }
+  
+  .right {
+    gap: var(--space-3);
+  }
+  
+  .username {
+    display: none;
+  }
+}
+
+/* Мобилка */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 var(--space-3);
+  }
+  
+  .catalogBtn {
+    display: none;
+  }
+  
+  .right {
+    gap: var(--space-2);
+  }
+  
+  .iconBtn {
+    padding: var(--space-1);
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .profile .avatar {
+    width: 28px;
+    height: 28px;
+  }
+}

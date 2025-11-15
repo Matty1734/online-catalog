@@ -1,0 +1,31 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+}
+
+.breadcrumbItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.breadcrumbLink {
+  transition: color 0.2s ease;
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-gray-900);
+}
+
+.breadcrumbSeparator {
+  color: var(--color-gray-400);
+}
+
+.breadcrumbCurrent {
+  color: var(--color-gray-900);
+  font-weight: var(--font-weight-medium);
+}

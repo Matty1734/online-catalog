@@ -1,0 +1,220 @@
+.productCard {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-4);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm), 0 0 0 transparent;
+  transition: box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.productCard:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.imageContainer {
+  position: relative;
+  margin-bottom: var(--space-3);
+}
+
+.image {
+  width: 100%;
+  height: 192px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.discountBadge {
+  position: absolute;
+  bottom: var(--space-2);
+  left: var(--space-0);
+  background-color: var(--color-accent-red);
+  color: var(--color-white);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-ml);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+}
+
+.favoriteBtn {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  padding: var(--space-1);
+  background-color: var(--color-white);
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease;
+}
+
+.favoriteBtn:hover {
+  transform: scale(1.1);
+}
+
+.favoriteIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-gray-400);
+  transition: color 0.2s ease;
+}
+
+.favoriteIconActive {
+  color: var(--color-accent-red);
+}
+
+.prices {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  margin-bottom: var(--space-2);
+  width: 100%;
+}
+
+.leftPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+.rightPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+}
+
+.currentPrice {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.currentPriceLabel {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-xs);
+  line-height: 1.2;
+}
+
+.oldPrice {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.oldPriceLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-600);
+  line-height: 1.2;
+}
+
+
+
+.title {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-700);
+  margin-bottom: var(--space-3);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
+
+  /* Для Firefox/Edge 
+  display: block;
+  line-height: 1.4;
+  max-height: calc(1.4em * 2); /* 2 строки */
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+}
+
+.starActive {
+  color: var(--color-accent-orange);
+  fill: currentColor;
+}
+
+.star:not(.starActive) {
+  color: var(--color-gray-300);
+}
+
+.cartBtn {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  transition: background-color 0.2s ease;
+}
+
+.cartBtn:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary-hover);
+  border: 1px solid var(--color-primary-hover);
+}
+
+.cartIcon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Мобилка */
+@media (max-width: 360px) {
+  .productCard {
+    padding: var(--space-3);
+  }
+  
+  .image {
+    height: 160px;
+  }
+  
+  .currentPrice {
+    font-size: var(--font-size-lg);
+  }
+  
+  .title {
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--space-2);
+  }
+  
+  .rating {
+    margin-bottom: var(--space-2);
+  }
+  
+  .star {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .cartBtn {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-xs);
+  }
+  
+  .cartIcon {
+    width: 14px;
+    height: 14px;
+  }
+}
+

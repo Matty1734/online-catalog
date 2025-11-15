@@ -1,0 +1,79 @@
+.relatedProducts {
+  margin-top: var(--space-12);
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-6);
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .productsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Skeleton styles */
+.productCardSkeleton {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.skeletonImage {
+  width: 100%;
+  height: 192px;
+  background-color: var(--color-gray-200);
+  border-radius: var(--radius-md);
+}
+
+.skeletonText {
+  height: 16px;
+  background-color: var(--color-gray-200);
+  border-radius: var(--radius-sm);
+}
+
+.skeletonPrice {
+  height: 24px;
+  background-color: var(--color-gray-200);
+  border-radius: var(--radius-sm);
+  width: 60%;
+}
+
+.skeletonButton {
+  height: 40px;
+  background-color: var(--color-gray-200);
+  border-radius: var(--radius-md);
+  margin-top: auto;
+}
+
+.animatePulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

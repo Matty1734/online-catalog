@@ -1,0 +1,129 @@
+.categoryFilter {
+  position: relative;
+  display: inline-block;
+  margin-bottom: var(--space-6);
+  width: 100%;
+  max-width: 300px;
+}
+
+.dropdownButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-700);
+}
+
+.dropdownButton:hover {
+  border-color: var(--color-gray-400);
+  background-color: var(--color-gray-50);
+}
+
+.dropdownButton:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.dropdownIcon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.dropdownIconOpen {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  z-index: 50;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: var(--space-1);
+}
+
+.dropdownItem {
+  display: block;
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-700);
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.dropdownItem:last-child {
+  border-bottom: none;
+}
+
+.dropdownItem:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-primary);
+}
+
+.dropdownItemActive {
+  background-color: var(--color-white);
+  color: var(--color-primary-hover);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-primary-hover);
+}
+
+.dropdownItemActive:hover {
+ 
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+}
+
+/* Планшет */
+@media (max-width: 768px) {
+  .categoryFilter {
+    max-width: 250px;
+  }
+  
+  .dropdownButton {
+    padding: var(--space-2) var(--space-3);
+  }
+  
+  .dropdownItem {
+    padding: var(--space-2) var(--space-3);
+  }
+}
+
+/* Мобилка */
+@media (max-width: 360px) {
+  .categoryFilter {
+    max-width: 100%;
+  }
+  
+  .dropdownButton {
+    padding: var(--space-2);
+    font-size: var(--font-size-xs);
+  }
+  
+  .dropdownItem {
+    padding: var(--space-2);
+    font-size: var(--font-size-xs);
+  }
+}
